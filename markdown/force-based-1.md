@@ -47,12 +47,20 @@ $\mathbf{{C}}$를 시간에 대해 미분해 속도 차원의 구속조건을 �
 \dot{{\mathbf{{C}}}}=\frac{{\partial{\mathbf{{C}}}}}{{\partial{\mathbf{{Q}}}}}\cdot\dot{{\mathbf{{Q}}}}={\mathbf{{J}}}\dot{{\mathbf{{Q}}}}={0}\,\,\Rightarrow\,\,{\mathbf{{J}}}^T\bot\dot{{\mathbf{{Q}}}}
 ```
 
-야코비안을 활용해서 구속조건의 시간에 대한 미분형을 써줄 수 있다. 또한, $\dot{{C}}={0}$이므로, 직교 조건도 확인할 수 있다. 이 때, 야코비안 행렬 $\mathbf{{J}}$는 다음과 같다.
-
+야코비안을 활용해서 구속조건의 시간에 대한 미분형을 써줄 수 있다. 또한, $\dot{{C}}={0}$이므로, 직교 조건도 확인할 수 있다. 이 때, 야코비안 행렬 $\mathbf{{J}}$는 다음과 같다.  
+  
 ```math
-{\mathbf{{J}}}={\left[\begin{matrix}\frac{{\partial{C}_{{1}}}}{{\partial{\mathbf{{q}}}_{{1}}}}&\frac{{\partial{C}_{{1}}}}{{\partial{\mathbf{{q}}}_{{2}}}}&\cdots&\frac{{\partial{C}_{{1}}}}{{\partial{\mathbf{{q}}}_{{n}}}}\\&\vdots&\\\frac{{\partial{C}_{{m}}}}{{\partial{\mathbf{{q}}}_{{1}}}}&\frac{{\partial{C}_{{m}}}}{{\partial{\mathbf{{q}}}_{{2}}}}&\cdots&\frac{{\partial{C}_{{m}}}}{{\partial{\mathbf{{q}}}_{{n}}}}\end{matrix}\right]},\quad\frac{{\partial{x}}}{{\partial{\mathbf{{y}}}}}={\left[\frac{{\partial{x}}}{{\partial{y}_{{1}}}},\,\frac{{\partial{x}}}{{\partial{y}_{{2}}}},\,\cdots,\,\frac{{\partial{x}}}{{\partial{y}_{{n}}}}\right]}
+\mathbf{J} = \begin{bmatrix}
+\frac{\partial C_1}{\partial q_1} & \frac{\partial C_1}{\partial q_2} & \cdots & \frac{\partial C_1}{\partial q_n} \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{\partial C_m}{\partial q_1} & \frac{\partial C_m}{\partial q_2} & \cdots & \frac{\partial C_m}{\partial q_n}
+\end{bmatrix}
 ```
 
+```math
+\frac{\partial x}{\partial \mathbf{y}} = \begin{bmatrix} \frac{\partial x}{\partial y_1}, & \frac{\partial x}{\partial y_2}, & \cdots, & \frac{\partial x}{\partial y_n} \end{bmatrix}
+```
+  
 즉, 야코비안 행렬은 구속조건의 각 성분에 대해 위치 벡터에 대한 편미분을 구한 것이다. 차원은 2차원인 경우 m * 3n이다.
 
 한 번 더 시간에 대해 미분해 가속도 차원의 구속조건을 구해보자.
@@ -95,16 +103,29 @@ $\mathbf{{\lambda}}$를 구했으면, ${\mathbf{{{F}_{{c}}}}}={\mathbf{{J}}}^{T}
 
 이후, 위치 갱신은 반-암시적 오일러 방법([Semi-implicit Euler method](https://ko.wikipedia.org/wiki/%EB%B0%98-%EC%95%94%EC%8B%9C%EC%A0%81_%EC%98%A4%EC%9D%BC%EB%9F%AC_%EB%B0%A9%EB%B2%95)) 혹은, 룽게-쿠타 방법([Runge-Kutta method](https://ko.wikipedia.org/wiki/%EB%A3%BD%EA%B2%8C-%EC%BF%A0%ED%83%80_%EB%B0%A9%EB%B2%95))을 사용할 수 있다.
 
-- 반-암시적 오일러 방법: $\mathbf{{Q}}_{i+1}=\mathbf{{Q}}_i+\mathbf{{\dot{{Q}}}}_{i+1}\Delta{t}$
+- 반-암시적 오일러 방법: $\mathbf{Q}\_{i+1}=\mathbf{Q}\_i +\mathbf{{\dot{{Q}}}}_{i+1}\Delta{t}$
 - 룽게-쿠타 방법(RK4):
 
-    ```math
-    \begin{align*}
-    {\mathbf{\dot{{Q}}}} &= f{{\left({t},{\mathbf{{Q}}}\right)}} \\
-    {k}_{{1}} &= f{{\left({t}_{{i}},\,{\mathbf{{Q}}}_{{i}}\right)}} \\
-    {k}_{{2}} &= f{{\left({t}_{{i}}+\frac{{\Delta{t}}}{{2}},\,{\mathbf{{Q}}}_{{i}}+\frac{{{k}_{{1}}\Delta{t}}}{{2}}\right)}} \\
-    {k}_{{3}} &= f{{\left({t}_{{i}}+\frac{{\Delta{t}}}{{2}},\,{\mathbf{{Q}}}_{{i}}+\frac{{{k}_{{2}}\Delta{t}}}{{2}}\right)}} \\
-    {k}_{{4}} &= f{{\left({t}_{{i}}+\Delta{t},\,{\mathbf{{Q}}}_{{i}}+{k}_{{3}}\Delta{t}\right)}} \\
-    {\mathbf{{Q}}}_{{i+1}} &= \mathbf{{Q}}_{{i}}+\frac{{\Delta{t}}}{{6}}\left({k}_{{1}}+2{k}_{{2}}+2{k}_{{3}}+{k}_{{4}}\right)
-    \end{align*}
-    ```
+```math
+\dot{\mathbf{Q}} = f(t, \mathbf{Q})
+```
+
+```math
+\mathbf{k_1} = f(t_i, \mathbf{Q}_i)
+```
+
+```math
+\mathbf{k_2} = f\left(t_i + \frac{\Delta t}{2}, \mathbf{Q}_i + \frac{\mathbf{k_1} \Delta t}{2}\right)
+```
+
+```math
+\mathbf{k_3} = f\left(t_i + \frac{\Delta t}{2}, \mathbf{Q}_i + \frac{\mathbf{k_2} \Delta t}{2}\right)
+```
+
+```math
+\mathbf{k_4} = f(t_i + \Delta t, \mathbf{Q}_i + \mathbf{k_3} \Delta t)
+```
+
+```math
+\mathbf{Q}_{i+1} = \mathbf{Q}_i + \frac{\Delta t}{6} \left( \mathbf{k_1} + 2\mathbf{k_2} + 2\mathbf{k_3} + \mathbf{k_4} \right)
+```
