@@ -85,7 +85,7 @@ $\mathbf{{\lambda}}$는 각 구속조건에 대한 라그랑지 승수를 가지
 두 식을 합치면, 다음과 같다.
 
 ```math
-{\mathbf{\dot{{J}}}}{\mathbf{\dot{{Q}}}}+{\mathbf{{J}}}{\mathbf{\ddot{{Q}}}}={0}\,\Rightarrow\,\color{pink}{{\mathbf{{J}}}{\mathbf{{M}}}^{ -{{1}}}{\mathbf{{J}}}^{T}}\color{white}{\mathbf{\lambda}}=\color{skyblue}{-{\mathbf{\dot{{J}}}}{\mathbf{\dot{{Q}}}}-{\mathbf{{J}}}{\mathbf{{M}}}^{ -{{1}}}{\mathbf{{{F}_{{{e}{x}{t}}}}}}}
+{\mathbf{\dot{{J}}}}{\mathbf{\dot{{Q}}}}+{\mathbf{{J}}}{\mathbf{\ddot{{Q}}}}={0}\,\Rightarrow\,\color{pink}{{\mathbf{{J}}}{\mathbf{{M}}}^{ -{{1}}}{\mathbf{{J}}}^{T}}\color{defaultcolor}{\mathbf{\lambda}}=\color{skyblue}{-{\mathbf{\dot{{J}}}}{\mathbf{\dot{{Q}}}}-{\mathbf{{J}}}{\mathbf{{M}}}^{ -{{1}}}{\mathbf{{{F}_{{{e}{x}{t}}}}}}}
 ```
 
 $\mathbf{{\lambda}}$앞의 $\color{pink}{{\mathbf{{J}}}{\mathbf{{M}}}^{ -{{1}}}{\mathbf{{J}}}^{T}}$은 m * m 차원이고, 뒤의 $\color{skyblue}{-{\mathbf{\dot{{J}}}}{\mathbf{\dot{{Q}}}}-{\mathbf{{J}}}{\mathbf{{M}}}^{ -{{1}}}{\mathbf{{{F}_{{{e}{x}{t}}}}}}}$은 m차원 벡터이다.  
