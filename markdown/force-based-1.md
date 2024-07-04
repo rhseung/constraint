@@ -85,7 +85,7 @@ $\mathbf{{\lambda}}$는 각 구속조건에 대한 라그랑지 승수를 가지
 두 식을 합치면, 다음과 같다.
 
 ```math
-\dot{\mathbf{J}}\dot{\mathbf{Q}} + \mathbf{J}\ddot{\mathbf{Q}} = 0 \implies \textcolor{red}{\mathbf{J}\mathbf{M}^{-1}\mathbf{J}^T} \lambda = \textcolor{blue}{-\dot{\mathbf{J}}\dot{\mathbf{Q}} - \mathbf{J}\mathbf{M}^{-1} \mathbf{{F}_{\text{ext}}}}
+\dot{\mathbf{J}}\dot{\mathbf{Q}} + \mathbf{J}\ddot{\mathbf{Q}} = 0 \implies \textcolor{red}{\mathbf{J}\mathbf{M}^{-1}\mathbf{J}^T} \mathbf{\lambda} = \textcolor{blue}{-\dot{\mathbf{J}}\dot{\mathbf{Q}} - \mathbf{J}\mathbf{M}^{-1} \mathbf{{F}_{\text{ext}}}}
 ```
 
 $\mathbf{{\lambda}}$앞의 $\textcolor{red}{\mathbf{J}\mathbf{M}^{-1}\mathbf{J}^T}$은 m * m 차원이고, 뒤의 $\textcolor{blue}{-\dot{\mathbf{J}}\dot{\mathbf{Q}} - \mathbf{J}\mathbf{M}^{-1} \mathbf{{F}_{\text{ext}}}}$은 m차원 벡터이다.  
