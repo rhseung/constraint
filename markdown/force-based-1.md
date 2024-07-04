@@ -85,13 +85,13 @@ $\mathbf{{\lambda}}$는 각 구속조건에 대한 라그랑지 승수를 가지
 두 식을 합치면, 다음과 같다.
 
 ```math
-{\mathbf{\dot{{J}}}}{\mathbf{\dot{{Q}}}}+{\mathbf{{J}}}{\mathbf{\ddot{{Q}}}}={0}\,\Rightarrow\,\color{pink}{{\mathbf{{J}}}{\mathbf{{M}}}^{ -{{1}}}{\mathbf{{J}}}^{T}}\color{defaultcolor}{\mathbf{\lambda}}=\color{skyblue}{-{\mathbf{\dot{{J}}}}{\mathbf{\dot{{Q}}}}-{\mathbf{{J}}}{\mathbf{{M}}}^{ -{{1}}}{\mathbf{{{F}_{{{e}{x}{t}}}}}}}
+\dot{\mathbf{J}}\dot{\mathbf{Q}} + \mathbf{J}\ddot{\mathbf{Q}} = 0 \implies \textcolor{red}{\mathbf{J}\mathbf{M}^{-1}\mathbf{J}^T} \lambda = \textcolor{blue}{-\dot{\mathbf{J}}\dot{\mathbf{Q}} - \mathbf{J}\mathbf{M}^{-1} \mathbf{{F}_{\text{ext}}}}
 ```
 
-$\mathbf{{\lambda}}$앞의 $\color{pink}{{\mathbf{{J}}}{\mathbf{{M}}}^{ -{{1}}}{\mathbf{{J}}}^{T}}$은 m * m 차원이고, 뒤의 $\color{skyblue}{-{\mathbf{\dot{{J}}}}{\mathbf{\dot{{Q}}}}-{\mathbf{{J}}}{\mathbf{{M}}}^{ -{{1}}}{\mathbf{{{F}_{{{e}{x}{t}}}}}}}$은 m차원 벡터이다.  
+$\mathbf{{\lambda}}$앞의 $\textcolor{red}{\mathbf{J}\mathbf{M}^{-1}\mathbf{J}^T}$은 m * m 차원이고, 뒤의 $\textcolor{blue}{-\dot{\mathbf{J}}\dot{\mathbf{Q}} - \mathbf{J}\mathbf{M}^{-1} \mathbf{{F}_{\text{ext}}}}$은 m차원 벡터이다.  
 위 식은 라그랑지 승수법을 이용한 방정식이다. 이 방정식을 풀어서 물체의 위치와 속도를 구할 수 있다.  
 
-${\color{pink}{{A}}}\mathbf{\lambda}={\color{skyblue}{b}}$ 꼴의 선형 방정식을 푸는 방법은 [PGS](https://ko.wikipedia.org/wiki/%EA%B0%80%EC%9A%B0%EC%8A%A4-%EC%9E%90%EC%9D%B4%EB%8D%B8_%EB%B0%A9%EB%B2%95)를 사용해서 풀 수 있다.
+${\color{red}{{A}}}\mathbf{\lambda}={\color{blue}{b}}$ 꼴의 선형 방정식을 푸는 방법은 [PGS](https://ko.wikipedia.org/wiki/%EA%B0%80%EC%9A%B0%EC%8A%A4-%EC%9E%90%EC%9D%B4%EB%8D%B8_%EB%B0%A9%EB%B2%95)를 사용해서 풀 수 있다.
 
 ---
 
