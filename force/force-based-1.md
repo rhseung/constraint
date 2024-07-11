@@ -102,7 +102,7 @@ ${\color{red}{{A}}}\mathbf{\lambda}={\color{blue}{b}}$ 꼴의 선형 방정식�
 $\mathbf{{\lambda}}$를 구했으면, ${\mathbf{{{F}_{{c}}}}}={\mathbf{{J}}}^{T}{\mathbf{{\lambda}}}$를 구할 수 있다. 이를 이용해 속도를 갱신할 수 있다.
 
 ```math
-{\mathbf{\dot{{Q}}}}_{{{i}+{1}}}={\mathbf{\dot{{Q}}}}_{{i}}+{\mathbf{{M}}}^{ -{{1}}}{\left({\mathbf{{{F}_{{{e}{x}{t}}}}}}+{\mathbf{{{F}_{{c}}}}}\right)}
+{\mathbf{\dot{{Q}}}}_{{{i}+{1}}}={\mathbf{\dot{{Q}}}}_{{i}}+{\mathbf{{M}}}^{ -{{1}}}{\left({\mathbf{{{F}_{{{e}{x}{t}}}}}}+{\mathbf{{{F}_{{c}}}}}\right)} \Delta t
 ```
 
 이후, 위치 갱신은 반-암시적 오일러 방법([Semi-implicit Euler method](https://ko.wikipedia.org/wiki/%EB%B0%98-%EC%95%94%EC%8B%9C%EC%A0%81_%EC%98%A4%EC%9D%BC%EB%9F%AC_%EB%B0%A9%EB%B2%95)) 혹은, 룽게-쿠타 방법([Runge-Kutta method](https://ko.wikipedia.org/wiki/%EB%A3%BD%EA%B2%8C-%EC%BF%A0%ED%83%80_%EB%B0%A9%EB%B2%95))을 사용할 수 있다.
