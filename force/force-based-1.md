@@ -2,6 +2,10 @@
 
 위치 상태 벡터 $\mathbf{{Q}}$는 n개의 물체의 위치와 관련된 정보를 가진다.
 
+$$
+x + 3
+$$
+
 ```math
 \mathbf{{Q}}={\left(\begin{matrix}{\mathbf{{p}}}_{{1}}\\\theta_{{1}}\\{\mathbf{{p}}}_{{2}}\\\theta_{{2}}\\\vdots\\{\mathbf{{p}}}_{{n}}\\\theta_{{n}}\end{matrix}\right)}={\left(\begin{matrix}{\mathbf{{q}}}_{{1}}\\{\mathbf{{q}}}_{{2}}\\\vdots\\{\mathbf{{q}}}_{{n}}\end{matrix}\right)}
 ```
