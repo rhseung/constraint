@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from numpy.linalg import inv
 
+# FIXME: 부자연스러움
+
 # 초기 값 설정
 p1 = np.array([6, -4])
 p2 = np.array([1, 4])
